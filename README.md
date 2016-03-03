@@ -20,7 +20,7 @@ To run the output homogenizer you have to download the following files from <a h
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance_types_sdtyped-dbo_en.nt.bz2">instance_types_heuristic_en.nt</a><br/>
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/page-ids_en.nt.bz2">page-ids_en.nt</a><br/>
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/transitive-redirects_en.nt.bz2">transitive-redirects_en.nt</a><br/>
-<a target="_blank" href="http://downloads.dbpedia.org/2015-04/links/yago_types.nt.bz2">yago_types.nt</a><br/>
+<a href="http://downloads.dbpedia.org/2015-04/links/yago_types.nt.bz2">yago_types.nt</a><br/>
 
 ## Configuration
 
@@ -57,3 +57,6 @@ If you use this code for research purposes, please cite our paper:
 
 Sergio Oramas, Luis Espinosa-Anke, Mohamed Sordo, Horacio Saggion, and Xavier Serra. 2016. ELMD : An automatically generated entity linking gold standard in the music domain. In In Proceedings of the 10th International Conference on Language Resources and Evaluation, LREC 2016.
 
+## License
+
+This project is licensed under the terms of the MIT license.
