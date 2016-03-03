@@ -15,12 +15,12 @@ The system works with three Entity Linking tools, namely Tagme, Babelfy and DBpe
 
 To run the output homogenizer you have to download the following files from <a href="http://dbpedia.org/Downloads2015-04">DBpedia</a>.
 
-<a href="http://downloads.dbpedia.org/2015-04/core-i18n/en/article-categories_en.nt.bz2">article_categories_en.nt</a>
-<a href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance-types_en.nt.bz2">instance_types_en.nt</a>
-<a href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance_types_sdtyped-dbo_en.nt.bz2">instance_types_heuristic_en.nt</a>
-<a href="http://downloads.dbpedia.org/2015-04/core-i18n/en/page_ids_en.nt.bz2">page_ids_en.nt</a>
-<a href="http://downloads.dbpedia.org/2015-04/core-i18n/en/transitive-redirects_en.nt.bz2">transitive-redirects_en.nt</a>
-<a href="http://downloads.dbpedia.org/2015-04/links/yago_types.nt.bz2">yago_types.nt</a>
+<a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/article-categories_en.nt.bz2">article_categories_en.nt</a><br/>
+<a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance-types_en.nt.bz2">instance_types_en.nt</a><br/>
+<a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance_types_sdtyped-dbo_en.nt.bz2">instance_types_heuristic_en.nt</a><br/>
+<a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/page-ids_en.nt.bz2">page-ids_en.nt</a><br/>
+<a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/transitive-redirects_en.nt.bz2">transitive-redirects_en.nt</a><br/>
+<a target="_blank" href="http://downloads.dbpedia.org/2015-04/links/yago_types.nt.bz2">yago_types.nt</a><br/>
 
 ## Configuration
 
