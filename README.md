@@ -1,5 +1,5 @@
-# el-agreement
-Framework to homogenize and combine the output of different entity linking tools, using the level of agreement as a confidence score.
+# ELVIS (Entity Linking Voting and Integration System)
+Framework to homogenize and combine the output of different entity linking tools, using the level of agreement between different tools as a confidence score.
 
 You can run different Entity Linking tools (e.g. Tagme, Babelfy, DBpeida-Spotlight) from the same script and then convert the ouput fo the different systems into a uniform format. Then, you can combine the information from the different systems into a unique output where the number of tools that agree on the identification of entities is used as a confidence score.
 
