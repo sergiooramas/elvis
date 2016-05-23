@@ -13,7 +13,7 @@ The system works with three Entity Linking tools, namely Tagme, Babelfy and DBpe
 
 ## Needed files
 
-To run the output homogenizer you have to download the following files from <a target="_blank" href="http://dbpedia.org/Downloads2015-04">DBpedia</a>.
+To run the output homogenizer you have to download the following files from <a target="_blank" href="http://dbpedia.org/Downloads2015-04">DBpedia</a> and put them in the dbpedia folder.
 
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/article-categories_en.nt.bz2">article_categories_en.nt</a><br/>
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance-types_en.nt.bz2">instance_types_en.nt</a><br/>
