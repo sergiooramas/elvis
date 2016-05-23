@@ -1,0 +1,1900 @@
+@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://mtg.upf.edu/elmd/Adele#char=0,24> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Adele Laurie Blue Adkins"^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "24"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAdele> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=0,5> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Adele"^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "5"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAdele> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=116,127> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "BRIT School"^^xsd:string ;
+    nif:beginIndex "116"^^xsd:nonNegativeInteger ;
+    nif:endIndex "127"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBRIT_School> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=121,127> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "School"^^xsd:string ;
+    nif:beginIndex "121"^^xsd:nonNegativeInteger ;
+    nif:endIndex "127"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSchool> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=13,17> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Blue"^^xsd:string ;
+    nif:beginIndex "13"^^xsd:nonNegativeInteger ;
+    nif:endIndex "17"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBlue> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=132,147> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Performing Arts"^^xsd:string ;
+    nif:beginIndex "132"^^xsd:nonNegativeInteger ;
+    nif:endIndex "147"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePerforming_arts> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=143,147> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Arts"^^xsd:string ;
+    nif:beginIndex "143"^^xsd:nonNegativeInteger ;
+    nif:endIndex "147"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceArt> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=152,162> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Technology"^^xsd:string ;
+    nif:beginIndex "152"^^xsd:nonNegativeInteger ;
+    nif:endIndex "162"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAudio_engineer> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=172,177> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Adele"^^xsd:string ;
+    nif:beginIndex "172"^^xsd:nonNegativeInteger ;
+    nif:endIndex "177"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAdele> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=18,24> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Adkins"^^xsd:string ;
+    nif:beginIndex "18"^^xsd:nonNegativeInteger ;
+    nif:endIndex "24"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAdkins> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=190,208> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "recording contract"^^xsd:string ;
+    nif:beginIndex "190"^^xsd:nonNegativeInteger ;
+    nif:endIndex "208"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRecording_contract> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=200,208> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "contract"^^xsd:string ;
+    nif:beginIndex "200"^^xsd:nonNegativeInteger ;
+    nif:endIndex "208"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceContract> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=212,214> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "XL"^^xsd:string ;
+    nif:beginIndex "212"^^xsd:nonNegativeInteger ;
+    nif:endIndex "214"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceXL_Recordings> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=212,225> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "XL Recordings"^^xsd:string ;
+    nif:beginIndex "212"^^xsd:nonNegativeInteger ;
+    nif:endIndex "225"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceXL_Recordings> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=252,256> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "demo"^^xsd:string ;
+    nif:beginIndex "252"^^xsd:nonNegativeInteger ;
+    nif:endIndex "256"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceDemo_%28music%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=260,267> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Myspace"^^xsd:string ;
+    nif:beginIndex "260"^^xsd:nonNegativeInteger ;
+    nif:endIndex "267"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMyspace> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=277,281> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "year"^^xsd:string ;
+    nif:beginIndex "277"^^xsd:nonNegativeInteger ;
+    nif:endIndex "281"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=96,283> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceYear> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=28,31> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "MBE"^^xsd:string ;
+    nif:beginIndex "28"^^xsd:nonNegativeInteger ;
+    nif:endIndex "31"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceOrder_of_the_British_Empire> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=309,320> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Brit Awards"^^xsd:string ;
+    nif:beginIndex "309"^^xsd:nonNegativeInteger ;
+    nif:endIndex "320"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBrit_Awards> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=314,320> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Awards"^^xsd:string ;
+    nif:beginIndex "314"^^xsd:nonNegativeInteger ;
+    nif:endIndex "320"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAccolade> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=331,337> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Choice"^^xsd:string ;
+    nif:beginIndex "331"^^xsd:nonNegativeInteger ;
+    nif:endIndex "337"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePink_%28singer%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=339,344> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "award"^^xsd:string ;
+    nif:beginIndex "339"^^xsd:nonNegativeInteger ;
+    nif:endIndex "344"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAccolade> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=357,360> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "BBC"^^xsd:string ;
+    nif:beginIndex "357"^^xsd:nonNegativeInteger ;
+    nif:endIndex "360"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBBC> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=361,366> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Sound"^^xsd:string ;
+    nif:beginIndex "361"^^xsd:nonNegativeInteger ;
+    nif:endIndex "366"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAcoustic_wave> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=361,374> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Sound of 2008"^^xsd:string ;
+    nif:beginIndex "361"^^xsd:nonNegativeInteger ;
+    nif:endIndex "374"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSound_of...> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=375,379> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "poll"^^xsd:string ;
+    nif:beginIndex "375"^^xsd:nonNegativeInteger ;
+    nif:endIndex "379"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=283,381> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceOpinion_poll> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=385,390> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "debut"^^xsd:string ;
+    nif:beginIndex "385"^^xsd:nonNegativeInteger ;
+    nif:endIndex "390"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=381,459> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Album> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceDebut_%28Bj%C3%B6rk_album%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=385,396> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "debut album"^^xsd:string ;
+    nif:beginIndex "385"^^xsd:nonNegativeInteger ;
+    nif:endIndex "396"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=381,459> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Album> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceDebut_Album_%28Sayuri_Ishikawa_album%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=391,396> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "album"^^xsd:string ;
+    nif:beginIndex "391"^^xsd:nonNegativeInteger ;
+    nif:endIndex "396"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=381,459> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAlbum> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=487,495> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "platinum"^^xsd:string ;
+    nif:beginIndex "487"^^xsd:nonNegativeInteger ;
+    nif:endIndex "495"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=459,538> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePlatinum> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=49,57> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "May 1988"^^xsd:string ;
+    nif:beginIndex "49"^^xsd:nonNegativeInteger ;
+    nif:endIndex "57"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource1988> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=503,505> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "UK"^^xsd:string ;
+    nif:beginIndex "503"^^xsd:nonNegativeInteger ;
+    nif:endIndex "505"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=459,538> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Location> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceUnited_Kingdom> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=511,526> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "double platinum"^^xsd:string ;
+    nif:beginIndex "511"^^xsd:nonNegativeInteger ;
+    nif:endIndex "526"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=459,538> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic_recording_sales_certification> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=518,526> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "platinum"^^xsd:string ;
+    nif:beginIndex "518"^^xsd:nonNegativeInteger ;
+    nif:endIndex "526"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=459,538> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePlatinum> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=541,551> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "appearance"^^xsd:string ;
+    nif:beginIndex "541"^^xsd:nonNegativeInteger ;
+    nif:endIndex "551"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=538,627> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePhenomenon> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=564,572> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Saturday"^^xsd:string ;
+    nif:beginIndex "564"^^xsd:nonNegativeInteger ;
+    nif:endIndex "572"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=538,627> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSaturday> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=573,578> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Night"^^xsd:string ;
+    nif:beginIndex "573"^^xsd:nonNegativeInteger ;
+    nif:endIndex "578"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=538,627> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceNight> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=579,583> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Live"^^xsd:string ;
+    nif:beginIndex "579"^^xsd:nonNegativeInteger ;
+    nif:endIndex "583"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=538,627> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceConcert> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=6,12> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Laurie"^^xsd:string ;
+    nif:beginIndex "6"^^xsd:nonNegativeInteger ;
+    nif:endIndex "12"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceDickey_Lee> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=609,615> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "career"^^xsd:string ;
+    nif:beginIndex "609"^^xsd:nonNegativeInteger ;
+    nif:endIndex "615"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=538,627> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceVocation> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=634,659> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "51st Annual Grammy Awards"^^xsd:string ;
+    nif:beginIndex "634"^^xsd:nonNegativeInteger ;
+    nif:endIndex "659"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource51st_Annual_Grammy_Awards> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=646,652> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Grammy"^^xsd:string ;
+    nif:beginIndex "646"^^xsd:nonNegativeInteger ;
+    nif:endIndex "652"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGrammy_Award> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=646,659> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Grammy Awards"^^xsd:string ;
+    nif:beginIndex "646"^^xsd:nonNegativeInteger ;
+    nif:endIndex "659"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGrammy_Award> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=653,659> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Awards"^^xsd:string ;
+    nif:beginIndex "653"^^xsd:nonNegativeInteger ;
+    nif:endIndex "659"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAccolade> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=669,674> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Adele"^^xsd:string ;
+    nif:beginIndex "669"^^xsd:nonNegativeInteger ;
+    nif:endIndex "674"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAdele> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=688,694> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "awards"^^xsd:string ;
+    nif:beginIndex "688"^^xsd:nonNegativeInteger ;
+    nif:endIndex "694"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAccolade> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=699,714> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Best New Artist"^^xsd:string ;
+    nif:beginIndex "699"^^xsd:nonNegativeInteger ;
+    nif:endIndex "714"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGrammy_Award_for_Best_New_Artist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=708,714> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Artist"^^xsd:string ;
+    nif:beginIndex "708"^^xsd:nonNegativeInteger ;
+    nif:endIndex "714"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceArtist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=719,752> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Best Female Pop Vocal Performance"^^xsd:string ;
+    nif:beginIndex "719"^^xsd:nonNegativeInteger ;
+    nif:endIndex "752"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGrammy_Award_for_Best_Female_Pop_Vocal_Performance> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=73,79> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "singer"^^xsd:string ;
+    nif:beginIndex "73"^^xsd:nonNegativeInteger ;
+    nif:endIndex "79"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSinging> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=73,94> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "singer and songwriter"^^xsd:string ;
+    nif:beginIndex "73"^^xsd:nonNegativeInteger ;
+    nif:endIndex "94"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSinger-songwriter> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=731,734> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Pop"^^xsd:string ;
+    nif:beginIndex "731"^^xsd:nonNegativeInteger ;
+    nif:endIndex "734"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePop_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=741,752> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Performance"^^xsd:string ;
+    nif:beginIndex "741"^^xsd:nonNegativeInteger ;
+    nif:endIndex "752"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=627,754> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePerformance> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=84,94> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "songwriter"^^xsd:string ;
+    nif:beginIndex "84"^^xsd:nonNegativeInteger ;
+    nif:endIndex "94"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Adele#char=0,96> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSongster> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=0,3> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Bob"^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "3"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceShilling_%28British_coin%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=0,9> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Bob Dylan"^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "9"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBob_Dylan> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=109,115> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "writer"^^xsd:string ;
+    nif:beginIndex "109"^^xsd:nonNegativeInteger ;
+    nif:endIndex "115"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAuthor> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=144,157> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "popular music"^^xsd:string ;
+    nif:beginIndex "144"^^xsd:nonNegativeInteger ;
+    nif:endIndex "157"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=117,198> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePopular_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=152,157> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "music"^^xsd:string ;
+    nif:beginIndex "152"^^xsd:nonNegativeInteger ;
+    nif:endIndex "157"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=117,198> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=162,169> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "culture"^^xsd:string ;
+    nif:beginIndex "162"^^xsd:nonNegativeInteger ;
+    nif:endIndex "169"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=117,198> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceCulture> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=189,196> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "decades"^^xsd:string ;
+    nif:beginIndex "189"^^xsd:nonNegativeInteger ;
+    nif:endIndex "196"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=117,198> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceDecade> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=246,251> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "1960s"^^xsd:string ;
+    nif:beginIndex "246"^^xsd:nonNegativeInteger ;
+    nif:endIndex "251"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resource1960s> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=26,38> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Robert Allen"^^xsd:string ;
+    nif:beginIndex "26"^^xsd:nonNegativeInteger ;
+    nif:endIndex "38"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRobert_Allen_%28composer%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=26,48> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Robert Allen Zimmerman"^^xsd:string ;
+    nif:beginIndex "26"^^xsd:nonNegativeInteger ;
+    nif:endIndex "48"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBob_Dylan> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=261,266> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "songs"^^xsd:string ;
+    nif:beginIndex "261"^^xsd:nonNegativeInteger ;
+    nif:endIndex "266"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSong> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=278,291> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "social unrest"^^xsd:string ;
+    nif:beginIndex "278"^^xsd:nonNegativeInteger ;
+    nif:endIndex "291"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRebellion> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=285,291> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "unrest"^^xsd:string ;
+    nif:beginIndex "285"^^xsd:nonNegativeInteger ;
+    nif:endIndex "291"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAgitator_%28device%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=302,307> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Dylan"^^xsd:string ;
+    nif:beginIndex "302"^^xsd:nonNegativeInteger ;
+    nif:endIndex "307"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBob_Dylan> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=319,330> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "suggestions"^^xsd:string ;
+    nif:beginIndex "319"^^xsd:nonNegativeInteger ;
+    nif:endIndex "330"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSuggestion> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=336,347> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "journalists"^^xsd:string ;
+    nif:beginIndex "336"^^xsd:nonNegativeInteger ;
+    nif:endIndex "347"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceJournalist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=362,371> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "spokesman"^^xsd:string ;
+    nif:beginIndex "362"^^xsd:nonNegativeInteger ;
+    nif:endIndex "371"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSpokesperson> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=380,390> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "generation"^^xsd:string ;
+    nif:beginIndex "380"^^xsd:nonNegativeInteger ;
+    nif:endIndex "390"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceContemporary_history> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=39,48> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Zimmerman"^^xsd:string ;
+    nif:beginIndex "39"^^xsd:nonNegativeInteger ;
+    nif:endIndex "48"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceZimmerman_%28surname%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=4,9> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Dylan"^^xsd:string ;
+    nif:beginIndex "4"^^xsd:nonNegativeInteger ;
+    nif:endIndex "9"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBob_Dylan> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=406,417> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "early songs"^^xsd:string ;
+    nif:beginIndex "406"^^xsd:nonNegativeInteger ;
+    nif:endIndex "417"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Album> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceEarly_Song> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=412,417> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "songs"^^xsd:string ;
+    nif:beginIndex "412"^^xsd:nonNegativeInteger ;
+    nif:endIndex "417"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSong> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=427,446> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Blowin' in the Wind"^^xsd:string ;
+    nif:beginIndex "427"^^xsd:nonNegativeInteger ;
+    nif:endIndex "446"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBlowin%27_in_the_Wind> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=442,446> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Wind"^^xsd:string ;
+    nif:beginIndex "442"^^xsd:nonNegativeInteger ;
+    nif:endIndex "446"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAir_current> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=453,481> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "The Times They Are a-Changin"^^xsd:string ;
+    nif:beginIndex "453"^^xsd:nonNegativeInteger ;
+    nif:endIndex "481"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Album> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceThe_Times_They_Are_a-Changin%27> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=491,498> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "anthems"^^xsd:string ;
+    nif:beginIndex "491"^^xsd:nonNegativeInteger ;
+    nif:endIndex "498"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAnthem> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=50,56> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "May 24"^^xsd:string ;
+    nif:beginIndex "50"^^xsd:nonNegativeInteger ;
+    nif:endIndex "56"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Holiday> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceCommonwealth_Day> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=507,528> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "American civil rights"^^xsd:string ;
+    nif:beginIndex "507"^^xsd:nonNegativeInteger ;
+    nif:endIndex "528"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAfrican-American_Civil_Rights_Movement_%281954%E2%80%9368%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=516,528> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "civil rights"^^xsd:string ;
+    nif:beginIndex "516"^^xsd:nonNegativeInteger ;
+    nif:endIndex "528"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceCivil_and_political_rights> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=522,528> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "rights"^^xsd:string ;
+    nif:beginIndex "522"^^xsd:nonNegativeInteger ;
+    nif:endIndex "528"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRights> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=533,551> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "anti-war movements"^^xsd:string ;
+    nif:beginIndex "533"^^xsd:nonNegativeInteger ;
+    nif:endIndex "551"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePeace_movement> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=542,551> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "movements"^^xsd:string ;
+    nif:beginIndex "542"^^xsd:nonNegativeInteger ;
+    nif:endIndex "551"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMotility> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=579,583> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "base"^^xsd:string ;
+    nif:beginIndex "579"^^xsd:nonNegativeInteger ;
+    nif:endIndex "583"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceBass_%28voice_type%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=591,610> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "American folk music"^^xsd:string ;
+    nif:beginIndex "591"^^xsd:nonNegativeInteger ;
+    nif:endIndex "610"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAmerican_folk_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=591,618> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "American folk music revival"^^xsd:string ;
+    nif:beginIndex "591"^^xsd:nonNegativeInteger ;
+    nif:endIndex "618"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAmerican_folk_music_revival> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=600,604> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "folk"^^xsd:string ;
+    nif:beginIndex "600"^^xsd:nonNegativeInteger ;
+    nif:endIndex "604"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFolk_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=600,610> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "folk music"^^xsd:string ;
+    nif:beginIndex "600"^^xsd:nonNegativeInteger ;
+    nif:endIndex "610"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFolk_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=600,618> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "folk music revival"^^xsd:string ;
+    nif:beginIndex "600"^^xsd:nonNegativeInteger ;
+    nif:endIndex "618"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRoots_revival> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=605,610> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "music"^^xsd:string ;
+    nif:beginIndex "605"^^xsd:nonNegativeInteger ;
+    nif:endIndex "610"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=650,663> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Rolling Stone"^^xsd:string ;
+    nif:beginIndex "650"^^xsd:nonNegativeInteger ;
+    nif:endIndex "663"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Magazine> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRolling_Stone> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=677,682> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "range"^^xsd:string ;
+    nif:beginIndex "677"^^xsd:nonNegativeInteger ;
+    nif:endIndex "682"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRange_%28music%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=686,699> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "popular music"^^xsd:string ;
+    nif:beginIndex "686"^^xsd:nonNegativeInteger ;
+    nif:endIndex "699"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePopular_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=694,699> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "music"^^xsd:string ;
+    nif:beginIndex "694"^^xsd:nonNegativeInteger ;
+    nif:endIndex "699"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=745,749> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "rock"^^xsd:string ;
+    nif:beginIndex "745"^^xsd:nonNegativeInteger ;
+    nif:endIndex "749"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRock_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=745,759> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "rock musicians"^^xsd:string ;
+    nif:beginIndex "745"^^xsd:nonNegativeInteger ;
+    nif:endIndex "759"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRock_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=750,759> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "musicians"^^xsd:string ;
+    nif:beginIndex "750"^^xsd:nonNegativeInteger ;
+    nif:endIndex "759"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusician> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=773,780> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "top end"^^xsd:string ;
+    nif:beginIndex "773"^^xsd:nonNegativeInteger ;
+    nif:endIndex "780"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Location> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceTop_End> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=788,801> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "United States"^^xsd:string ;
+    nif:beginIndex "788"^^xsd:nonNegativeInteger ;
+    nif:endIndex "801"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Location> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceUnited_States> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=788,807> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "United States music"^^xsd:string ;
+    nif:beginIndex "788"^^xsd:nonNegativeInteger ;
+    nif:endIndex "807"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic_of_the_United_States> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=79,96> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "singer-songwriter"^^xsd:string ;
+    nif:beginIndex "79"^^xsd:nonNegativeInteger ;
+    nif:endIndex "96"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSinger-songwriter> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=795,801> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "States"^^xsd:string ;
+    nif:beginIndex "795"^^xsd:nonNegativeInteger ;
+    nif:endIndex "801"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Location> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceUnited_States> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=802,807> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "music"^^xsd:string ;
+    nif:beginIndex "802"^^xsd:nonNegativeInteger ;
+    nif:endIndex "807"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=802,814> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "music charts"^^xsd:string ;
+    nif:beginIndex "802"^^xsd:nonNegativeInteger ;
+    nif:endIndex "814"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRecord_chart> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=808,814> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "charts"^^xsd:string ;
+    nif:beginIndex "808"^^xsd:nonNegativeInteger ;
+    nif:endIndex "814"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceChart> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=837,849> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "denunciation"^^xsd:string ;
+    nif:beginIndex "837"^^xsd:nonNegativeInteger ;
+    nif:endIndex "849"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePact> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=854,863> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "criticism"^^xsd:string ;
+    nif:beginIndex "854"^^xsd:nonNegativeInteger ;
+    nif:endIndex "863"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceLiterary_criticism> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=883,887> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "folk"^^xsd:string ;
+    nif:beginIndex "883"^^xsd:nonNegativeInteger ;
+    nif:endIndex "887"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFolk_music> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=888,896> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "movement"^^xsd:string ;
+    nif:beginIndex "888"^^xsd:nonNegativeInteger ;
+    nif:endIndex "896"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMotility> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=98,104> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "artist"^^xsd:string ;
+    nif:beginIndex "98"^^xsd:nonNegativeInteger ;
+    nif:endIndex "104"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceArtist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,9> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Francisco"^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "9"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFrancisco_%28moon%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=136,144> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "flamenco"^^xsd:string ;
+    nif:beginIndex "136"^^xsd:nonNegativeInteger ;
+    nif:endIndex "144"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=145,154> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "guitarist"^^xsd:string ;
+    nif:beginIndex "145"^^xsd:nonNegativeInteger ;
+    nif:endIndex "154"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGuitarist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=156,164> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "composer"^^xsd:string ;
+    nif:beginIndex "156"^^xsd:nonNegativeInteger ;
+    nif:endIndex "164"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceComposer> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=169,177> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "producer"^^xsd:string ;
+    nif:beginIndex "169"^^xsd:nonNegativeInteger ;
+    nif:endIndex "177"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRecord_producer> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=18,25> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Sánchez"^^xsd:string ;
+    nif:beginIndex "18"^^xsd:nonNegativeInteger ;
+    nif:endIndex "25"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceS%C3%A1nchez> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=206,218> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "new flamenco"^^xsd:string ;
+    nif:beginIndex "206"^^xsd:nonNegativeInteger ;
+    nif:endIndex "218"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceNew_Flamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=210,218> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "flamenco"^^xsd:string ;
+    nif:beginIndex "210"^^xsd:nonNegativeInteger ;
+    nif:endIndex "218"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=219,224> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "style"^^xsd:string ;
+    nif:beginIndex "219"^^xsd:nonNegativeInteger ;
+    nif:endIndex "224"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMode_%28literature%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=247,255> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "flamenco"^^xsd:string ;
+    nif:beginIndex "247"^^xsd:nonNegativeInteger ;
+    nif:endIndex "255"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=26,31> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Gomez"^^xsd:string ;
+    nif:beginIndex "26"^^xsd:nonNegativeInteger ;
+    nif:endIndex "31"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGomez_%28band%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=266,279> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "establishment"^^xsd:string ;
+    nif:beginIndex "266"^^xsd:nonNegativeInteger ;
+    nif:endIndex "279"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceOrganization> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=283,288> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Spain"^^xsd:string ;
+    nif:beginIndex "283"^^xsd:nonNegativeInteger ;
+    nif:endIndex "288"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Location> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceSpain> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=315,323> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "flamenco"^^xsd:string ;
+    nif:beginIndex "315"^^xsd:nonNegativeInteger ;
+    nif:endIndex "323"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=324,334> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "guitarists"^^xsd:string ;
+    nif:beginIndex "324"^^xsd:nonNegativeInteger ;
+    nif:endIndex "334"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGuitarist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=36,44> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "December"^^xsd:string ;
+    nif:beginIndex "36"^^xsd:nonNegativeInteger ;
+    nif:endIndex "44"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceDecember> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=380,395> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "genres of music"^^xsd:string ;
+    nif:beginIndex "380"^^xsd:nonNegativeInteger ;
+    nif:endIndex "395"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic_genre> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=390,395> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "music"^^xsd:string ;
+    nif:beginIndex "390"^^xsd:nonNegativeInteger ;
+    nif:endIndex "395"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=418,422> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "jazz"^^xsd:string ;
+    nif:beginIndex "418"^^xsd:nonNegativeInteger ;
+    nif:endIndex "422"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceJazz> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,431> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Richard"^^xsd:string ;
+    nif:beginIndex "424"^^xsd:nonNegativeInteger ;
+    nif:endIndex "431"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRichard_Jobson_%28television_presenter%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,439> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Richard Chapman"^^xsd:string ;
+    nif:beginIndex "424"^^xsd:nonNegativeInteger ;
+    nif:endIndex "439"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceRichard_Chapman_%28musician%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=444,456> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Eric Clapton"^^xsd:string ;
+    nif:beginIndex "444"^^xsd:nonNegativeInteger ;
+    nif:endIndex "456"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceEric_Clapton> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=458,465> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "authors"^^xsd:string ;
+    nif:beginIndex "458"^^xsd:nonNegativeInteger ;
+    nif:endIndex "465"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAuthor> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=469,475> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Guitar"^^xsd:string ;
+    nif:beginIndex "469"^^xsd:nonNegativeInteger ;
+    nif:endIndex "475"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGuitar> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=477,482> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Music"^^xsd:string ;
+    nif:beginIndex "477"^^xsd:nonNegativeInteger ;
+    nif:endIndex "482"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusic> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=484,491> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "History"^^xsd:string ;
+    nif:beginIndex "484"^^xsd:nonNegativeInteger ;
+    nif:endIndex "491"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceHistory> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=493,500> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Players"^^xsd:string ;
+    nif:beginIndex "493"^^xsd:nonNegativeInteger ;
+    nif:endIndex "500"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMusician> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=514,519> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Lucía"^^xsd:string ;
+    nif:beginIndex "514"^^xsd:nonNegativeInteger ;
+    nif:endIndex "519"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Person> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceLuc%C3%ADa_%28singer%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=548,553> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "world"^^xsd:string ;
+    nif:beginIndex "548"^^xsd:nonNegativeInteger ;
+    nif:endIndex "553"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceMacrocosm_and_microcosm> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=55,63> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "February"^^xsd:string ;
+    nif:beginIndex "55"^^xsd:nonNegativeInteger ;
+    nif:endIndex "63"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFebruary> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=55,68> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "February 2014"^^xsd:string ;
+    nif:beginIndex "55"^^xsd:nonNegativeInteger ;
+    nif:endIndex "68"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFebruary_2014> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=557,565> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "flamenco"^^xsd:string ;
+    nif:beginIndex "557"^^xsd:nonNegativeInteger ;
+    nif:endIndex "565"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=557,572> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "flamenco guitar"^^xsd:string ;
+    nif:beginIndex "557"^^xsd:nonNegativeInteger ;
+    nif:endIndex "572"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco_guitar> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=566,572> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "guitar"^^xsd:string ;
+    nif:beginIndex "566"^^xsd:nonNegativeInteger ;
+    nif:endIndex "572"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGuitar> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=582,588> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Dennis"^^xsd:string ;
+    nif:beginIndex "582"^^xsd:nonNegativeInteger ;
+    nif:endIndex "588"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#Album> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceWish_You_Were_Here_%28Badfinger_album%29> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=597,603> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "author"^^xsd:string ;
+    nif:beginIndex "597"^^xsd:nonNegativeInteger ;
+    nif:endIndex "603"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAuthor> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=607,613> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Guitar"^^xsd:string ;
+    nif:beginIndex "607"^^xsd:nonNegativeInteger ;
+    nif:endIndex "613"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGuitar> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=614,619> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Atlas"^^xsd:string ;
+    nif:beginIndex "614"^^xsd:nonNegativeInteger ;
+    nif:endIndex "619"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceAtlas> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=621,629> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Flamenco"^^xsd:string ;
+    nif:beginIndex "621"^^xsd:nonNegativeInteger ;
+    nif:endIndex "629"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceFlamenco> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=667,674> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "history"^^xsd:string ;
+    nif:beginIndex "667"^^xsd:nonNegativeInteger ;
+    nif:endIndex "674"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceHistory> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=686,696> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "guitarists"^^xsd:string ;
+    nif:beginIndex "686"^^xsd:nonNegativeInteger ;
+    nif:endIndex "696"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceGuitarist> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=80,84> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Paco"^^xsd:string ;
+    nif:beginIndex "80"^^xsd:nonNegativeInteger ;
+    nif:endIndex "84"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourceCocaine_paste> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=80,93> a nif:RFC5147String,
+        nif:String,
+        nif:Word ;
+    nif:anchorOf "Paco de Lucía"^^xsd:string ;
+    nif:beginIndex "80"^^xsd:nonNegativeInteger ;
+    nif:endIndex "93"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> ;
+    nif:sentence <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> ;
+    itsrdf:taClassRef <http://nerd.eurecom.fr/ontology#MusicalArtist> ;
+    itsrdf:taIdentRef <http://dbpedia.org/resourcePaco_de_Luc%C3%ADa> ;
+    itsrdf:taSource "DBpedia_en_3.9"^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=381,459> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Her debut album, 19, was released in 2008 to commercial and critical success."^^xsd:string ;
+    nif:beginIndex "381"^^xsd:nonNegativeInteger ;
+    nif:endIndex "459"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Adele#char=459,538> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "It is certified seven times platinum in the UK, and double platinum in the US."^^xsd:string ;
+    nif:beginIndex "459"^^xsd:nonNegativeInteger ;
+    nif:endIndex "538"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=117,198> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "He has been influential in popular music and culture for more than five decades."^^xsd:string ;
+    nif:beginIndex "117"^^xsd:nonNegativeInteger ;
+    nif:endIndex "198"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> .
+
+<http://mtg.upf.edu/elmd/Adele#char=538,627> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "An appearance she made on Saturday Night Live in late 2008 boosted her career in the US."^^xsd:string ;
+    nif:beginIndex "538"^^xsd:nonNegativeInteger ;
+    nif:endIndex "627"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Adele#char=283,381> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "In 2007, she received the Brit Awards \"Critics' Choice\" award and won the BBC Sound of 2008 poll."^^xsd:string ;
+    nif:beginIndex "283"^^xsd:nonNegativeInteger ;
+    nif:endIndex "381"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=198,392> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Much of his most celebrated work dates from the 1960s when his songs chronicled social unrest, although Dylan repudiated suggestions from journalists that he was a spokesman for his generation."^^xsd:string ;
+    nif:beginIndex "198"^^xsd:nonNegativeInteger ;
+    nif:endIndex "392"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> .
+
+<http://mtg.upf.edu/elmd/Adele#char=0,96> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Adele Laurie Blue Adkins[5] MBE (/əˈdɛl/; born 5 May 1988) is an English singer and songwriter."^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "96"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=0,117> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Bob Dylan (/ˈdɪlən/; born Robert Allen Zimmerman, May 24, 1941) is an American singer-songwriter, artist and writer."^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "117"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> .
+
+<http://mtg.upf.edu/elmd/Adele#char=627,754> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "At the 51st Annual Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance."^^xsd:string ;
+    nif:beginIndex "627"^^xsd:nonNegativeInteger ;
+    nif:endIndex "754"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=392,553> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Nevertheless, early songs such as \"Blowin' in the Wind\" and \"The Times They Are a-Changin'\" became anthems for the American civil rights and anti-war movements."^^xsd:string ;
+    nif:beginIndex "392"^^xsd:nonNegativeInteger ;
+    nif:endIndex "553"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=553,709> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "After he left his initial base in the American folk music revival, his six-minute single \"Like a Rolling Stone\" altered the range of popular music in 1965."^^xsd:string ;
+    nif:beginIndex "553"^^xsd:nonNegativeInteger ;
+    nif:endIndex "709"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=179,424> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "A leading proponent of the new flamenco style, he helped legitimize flamenco among the establishment in Spain, and was one of the first flamenco guitarists to have successfully crossed over into other genres of music such as classical and jazz."^^xsd:string ;
+    nif:beginIndex "179"^^xsd:nonNegativeInteger ;
+    nif:endIndex "424"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,179> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Francisco Gustavo Sánchez Gomez (21 December 1947 – 25 February 2014), known as Paco de Lucía [ˈpako ðe luˈθia], was a Spanish virtuoso flamenco guitarist, composer and producer."^^xsd:string ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "179"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> .
+
+<http://mtg.upf.edu/elmd/Adele#char=96,283> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Graduating from the BRIT School for Performing Arts and Technology in 2006, Adele was given a recording contract by XL Recordings after a friend posted her demo on Myspace the same year."^^xsd:string ;
+    nif:beginIndex "96"^^xsd:nonNegativeInteger ;
+    nif:endIndex "283"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Adele#char=0,755> .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=709,898> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "His mid-1960s recordings, backed by rock musicians, reached the top end of the United States music charts while also attracting denunciation and criticism from others in the folk movement."^^xsd:string ;
+    nif:beginIndex "709"^^xsd:nonNegativeInteger ;
+    nif:endIndex "898"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=424,699> a nif:RFC5147String,
+        nif:Sentence,
+        nif:String ;
+    nif:anchorOf "Richard Chapman and Eric Clapton, authors of Guitar: Music, History, Players, describe de Lucía as a \"titanic figure in the world of flamenco guitar\",[1] and Dennis Koster, author of Guitar Atlas, Flamenco, has referred to de Lucía as \"one of history's greatest guitarists.\""^^xsd:string ;
+    nif:beginIndex "424"^^xsd:nonNegativeInteger ;
+    nif:endIndex "699"^^xsd:nonNegativeInteger ;
+    nif:referenceContext <http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> .
+
+<http://mtg.upf.edu/elmd/Paco_de_Lucía#char=0,700> a nif:Context,
+        nif:RFC5147String,
+        nif:String ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "700"^^xsd:nonNegativeInteger ;
+    nif:isString " Francisco Gustavo Sánchez Gomez (21 December 1947 – 25 February 2014), known as Paco de Lucía [ˈpako ðe luˈθia], was a Spanish virtuoso flamenco guitarist, composer and producer. A leading proponent of the new flamenco style, he helped legitimize flamenco among the establishment in Spain, and was one of the first flamenco guitarists to have successfully crossed over into other genres of music such as classical and jazz. Richard Chapman and Eric Clapton, authors of Guitar: Music, History, Players, describe de Lucía as a \"titanic figure in the world of flamenco guitar\",[1] and Dennis Koster, author of Guitar Atlas, Flamenco, has referred to de Lucía as \"one of history's greatest guitarists.\" "^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Adele#char=0,755> a nif:Context,
+        nif:RFC5147String,
+        nif:String ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "755"^^xsd:nonNegativeInteger ;
+    nif:isString " Adele Laurie Blue Adkins[5] MBE (/əˈdɛl/; born 5 May 1988) is an English singer and songwriter. Graduating from the BRIT School for Performing Arts and Technology in 2006, Adele was given a recording contract by XL Recordings after a friend posted her demo on Myspace the same year. In 2007, she received the Brit Awards \"Critics' Choice\" award and won the BBC Sound of 2008 poll. Her debut album, 19, was released in 2008 to commercial and critical success. It is certified seven times platinum in the UK, and double platinum in the US. An appearance she made on Saturday Night Live in late 2008 boosted her career in the US. At the 51st Annual Grammy Awards in 2009, Adele received the awards for Best New Artist and Best Female Pop Vocal Performance. "^^xsd:string .
+
+<http://mtg.upf.edu/elmd/Bob_Dylan#char=0,899> a nif:Context,
+        nif:RFC5147String,
+        nif:String ;
+    nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+    nif:endIndex "899"^^xsd:nonNegativeInteger ;
+    nif:isString " Bob Dylan (/ˈdɪlən/; born Robert Allen Zimmerman, May 24, 1941) is an American singer-songwriter, artist and writer. He has been influential in popular music and culture for more than five decades. Much of his most celebrated work dates from the 1960s when his songs chronicled social unrest, although Dylan repudiated suggestions from journalists that he was a spokesman for his generation. Nevertheless, early songs such as \"Blowin' in the Wind\" and \"The Times They Are a-Changin'\" became anthems for the American civil rights and anti-war movements. After he left his initial base in the American folk music revival, his six-minute single \"Like a Rolling Stone\" altered the range of popular music in 1965. His mid-1960s recordings, backed by rock musicians, reached the top end of the United States music charts while also attracting denunciation and criticism from others in the folk movement. "^^xsd:string .
+

@@ -1,7 +1,7 @@
 # ELVIS (Entity Linking Voting and Integration System)
-Framework to homogenize and combine the output of different entity linking tools, using the level of agreement between different tools as a confidence score.
+Framework to homogenize and combine the output of different entity linking tools, using the level of agreement between different tools as a confidence score. It acts as a python wrapper for different Entity Linking systems.
 
-You can run different Entity Linking tools (e.g. Tagme, Babelfy, DBpeida-Spotlight) from the same script and then convert the ouput fo the different systems into a uniform format. Then, you can combine the information from the different systems into a unique output where the number of tools that agree on the identification of entities is used as a confidence score.
+You can run different Entity Linking tools (e.g. Tagme, Babelfy, DBpeida-Spotlight) from the same script and then convert the ouput fo the different systems into a uniform format (ELVIS format). Then, you can combine the information from the different systems into a unique output where the number of tools that agree on the identification of entities is used as a confidence score. In addition, you can convert ELVIS format to NIF format and XML format that can be loaded in GATE.
 
 The system does a batch process on a folder of text files. run_entity_linking.py runs a specific entity linking tool on every text file. For each text file, it tokenizes the text and run the entity linking tool with the whole text. Then entities are splitted in sentences in the output files. There is one output file for each input text file.
 
@@ -13,7 +13,7 @@ The system works with three Entity Linking tools, namely Tagme, Babelfy and DBpe
 
 ## Needed files
 
-To run the output homogenizer you have to download the following files from <a href="http://dbpedia.org/Downloads2015-04">DBpedia</a>.
+To run the output homogenizer you have to download the following files from <a target="_blank" href="http://dbpedia.org/Downloads2015-04">DBpedia</a>.
 
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/article-categories_en.nt.bz2">article_categories_en.nt</a><br/>
 <a target="_blank" href="http://downloads.dbpedia.org/2015-04/core-i18n/en/instance-types_en.nt.bz2">instance_types_en.nt</a><br/>
@@ -51,11 +51,19 @@ Then you will find the final agreement output in the entities/agreement/ folder.
 
 Note that homogenize_output.py will take some time as it has to load a lot of information from DBpedia in memory.
 
+To convert the homogenized ouptut of DBpedia Spotlight to NIF fro example you have to run
+
+python elvis2nif.py spotlight example_h
+
+Or to convert for instance the agreement output from ELVIS format to XML format GATE compatible, you must run
+
+python elvis2xml.py agreement example_h_2
+
 ## References
 
-If you use this code for research purposes, please cite our paper:
+If you use this code for research purposes, please cite our <a target="_blank" href="http://mtg.upf.edu/node/3451">paper</a>:
 
-Sergio Oramas, Luis Espinosa-Anke, Mohamed Sordo, Horacio Saggion, and Xavier Serra. 2016. ELMD : An automatically generated entity linking gold standard in the music domain. In In Proceedings of the 10th International Conference on Language Resources and Evaluation, LREC 2016.
+Sergio Oramas, Luis Espinosa-Anke, Mohamed Sordo, Horacio Saggion, and Xavier Serra. 2016. ELMD : An Automatically Generated Entity Linking Gold Standard Dataset in the Music Domain. In In Proceedings of the 10th International Conference on Language Resources and Evaluation, LREC 2016.
 
 ## License
 

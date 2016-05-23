@@ -72,7 +72,7 @@ def spotlight(sentences):
                         entities.append(entity)
                     if offset > accumulated + len(sentence):
                         break
-            accumulated += len(sentence)
+            accumulated += len(sentence) + 1
             ner_sentences.append({"text":sentence.strip(),"entities":entities,"index":index})
             index += 1
     return ner_sentences
@@ -103,7 +103,7 @@ def tagme(sentences):
                         entities.append(entity)
                     if resource['start'] > accumulated + len(sentence):
                         break
-            accumulated += len(sentence)
+            accumulated += len(sentence) + 1
             ner_sentences.append({"text":sentence.strip(),"entities":entities,"index":index})
             index += 1
     return ner_sentences
@@ -131,7 +131,7 @@ def babelfy(sentences):
                     entities.append(entity)
                 if resource['charFragment']['start'] > accumulated + len(sentence):
                     break
-            accumulated += len(sentence)
+            accumulated += len(sentence) + 1
             ner_sentences.append({"text":sentence.strip(),"entities":entities,"index":index})
             index += 1
     return ner_sentences
