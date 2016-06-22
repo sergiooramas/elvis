@@ -17,14 +17,14 @@ def _call(cmd):
             else:
                 print "Error"
                 tries += 1
+            return p.returncode, stdout
         except:
             print "Error"
             tries += 1
-    return p.returncode, stdout
+            return 0,""
 
-
-def _dbpedia_annotate(sentence):
-    cmd = ['curl', '-H', 'Accept: application/json', settings.DBPEDIA_SPOTLIGHT_ENDPOINT, '--data-urlencode', 'text=%s' % sentence,
+def _dbpedia_annotate(text):
+    cmd = ['curl', '-H', 'Accept: application/json', settings.DBPEDIA_SPOTLIGHT_ENDPOINT, '--data-urlencode', 'text=%s' % urllib.quote(text.encode("utf8")),
                '--data', 'confidence=0.2', '--data', 'support=20']
     return _call(cmd)
 
@@ -51,9 +51,12 @@ def create_directories(technique, source):
 def spotlight(sentences):
     text = "\n".join(sentences)
     ner_sentences = []
-    if text != "":
+    if text.strip() != "":
         code, data = _dbpedia_annotate(text)
-        data = eval(data)
+        try:
+            data = eval(data)
+        except:
+            data = []
         accumulated = 0
         index = 0
         for sentence in sentences:
