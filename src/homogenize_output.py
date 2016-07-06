@@ -5,6 +5,15 @@ import codecs
 import argparse
 import os
 import urllib
+import requests
+
+uri_to_types = {}
+uri_to_categories = {}
+id_to_dbpedia = {}
+redirection_to_uri = {}
+
+session = requests.Session()
+session.mount(settings.SERVER_URL, requests.adapters.HTTPAdapter(max_retries=5))
 
 def load_types():
     f = open(settings.DBPEDIA_PATH+"instance_types_en.nt")
@@ -43,7 +52,7 @@ def load_types():
             type = "Yago:"+type_token[type_token.rfind("/")+1:-1]
             uri_to_types.setdefault(uri,[]).append(type)
     f.close()
-    return uri_to_types    
+    return uri_to_types
 
 def load_categories():
     f = open(settings.DBPEDIA_PATH+"article_categories_en.nt")
@@ -87,17 +96,75 @@ def create_directories(technique, source):
     if not os.path.exists(settings.PATH+"/entities/"+technique+"/"+source+"_h"):
         os.mkdir(settings.PATH+"/entities/"+technique+"/"+source+"_h")
 
-def homogenize_ner(technique,source):
-    if technique == 'all':
-        techniques = ['spotlight','tagme','babelfy']
-    else:
-        techniques = [technique]
+def load_from_local():
+    global redirection_to_uri, uri_to_types, uri_to_categories, id_to_dbpedia
     uri_to_types = load_types()
     if technique == 'all' or technique == 'spotlight' or technique == 'babelfy':
         uri_to_categories = load_categories()
     if technique == 'all' or technique == 'tagme':
         id_to_dbpedia = load_ids()
     redirection_to_uri = load_redirections()
+
+def get_redirections(key, use_remote=False):
+    global redirection_to_uri
+    if use_remote:
+        url = settings.SERVER_URL + "/redirections"
+        q = session.get(url, data={'key': key})
+        resp = q.json()
+        return resp['result']
+    else:
+        return redirection_to_uri[key]
+
+def get_categories(key, use_remote=False):
+    global uri_to_categories
+    if use_remote:
+        url = settings.SERVER_URL + "/categories"
+        q = session.get(url, data={'key': key})
+        resp = q.json()
+        return resp['result']
+    else:
+        return uri_to_categories[key]
+
+def get_id_dbpedia(key, use_remote=False):
+    global id_to_dbpedia
+    if use_remote:
+        url = settings.SERVER_URL + "/ids"
+        q = session.get(url, data={'key': key})
+        resp = q.json()
+        return resp['result']
+    else:
+        return id_to_dbpedia[key]
+
+def get_types(key, use_remote=False):
+    global uri_to_types
+    if use_remote:
+        url = settings.SERVER_URL + "/types"
+        q = session.get(url, data={'key': key})
+        resp = q.json()
+        return resp['result']
+    else:
+        return uri_to_types[key]
+
+def check_status():
+    url = settings.SERVER_URL + "/status"
+    try:
+        q = session.get(url)
+        return q.status_code == 200
+    except requests.exceptions.ConnectionError:
+        return False
+
+def homogenize_ner(technique,source):
+    # Check if remote server is working, otherwise use local files
+    remote_working = check_status()
+    if not remote_working:
+        print "Starting to load data from local files"
+        load_from_local()
+
+    if technique == 'all':
+        techniques = ['spotlight','tagme','babelfy']
+    else:
+        techniques = [technique]
+
     print "Data loaded"
     for technique in techniques:
         create_directories(technique, source)
@@ -113,39 +180,53 @@ def homogenize_ner(technique,source):
                     add = True
                     if technique.lower() == "spotlight":
                         uri = entity['uri']
-                        if entity['uri'] in uri_to_categories:
-                            entity['categories'] = uri_to_categories[entity['uri']]
+                        ret_categories = get_categories(entity['uri'],
+                                use_remote=remote_working)
+                        if ret_categories:
+                            entity['categories'] = ret_categories
                         if entity['types'] == "":
-                            if uri in uri_to_types:
-                                entity['types'] = ",".join(uri_to_types[uri])                        
+                            ret_types = get_types(uri, use_remote=remote_working)
+                            if ret_types:
+                                entity['types'] = ",".join(ret_types)
                     elif technique.lower() == "tagme":
                         entity['types'] = ""
-                        if int(entity['id']) in id_to_dbpedia:
-                            entity['uri'] = id_to_dbpedia[entity['id']]
+                        ret_id_dbpedia = get_id_dbpedia(entity['id'],
+                                 use_remote=remote_working)
+                        if ret_id_dbpedia:
+                            entity['uri'] = ret_id_dbpedia
+
                         elif 'uri' in entity:
                             entity['uri'] = "http://dbpedia.org/resource/"+entity['uri'].replace(" ","_")
                         else:
                             entity['uri'] = "NONE"
                             add = False
                         uri = entity['uri']
-                        if uri in uri_to_types:
-                            entity['types'] = ",".join(uri_to_types[uri])
+                        ret_types = get_types(uri, use_remote=remote_working)
+                        if ret_types:
+                            entity['types'] = ",".join(ret_types)
+
                         formated_categories = []
                         if 'categories' in entity:
                             for category in entity['categories']:
-                                formated_categories.append(category.replace(" ","_"))                        
+                                formated_categories.append(category.replace(" ","_"))
                         entity['categories'] = formated_categories
                     elif technique.lower() == "babelfy":
                         entity['types'] = ""
                         if "dbpedia" in entity['uri']:
                             entity['uri'] = entity['uri'].replace("\\u0026","&").replace("\\u0027","'")
-                            if entity['uri'] in uri_to_categories:
-                                entity['categories'] = uri_to_categories[entity['uri']]
-                            if entity['uri'] in uri_to_types:
-                                entity['types'] = ",".join(uri_to_types[entity['uri']])
+                            ret_categories = get_categories(entity['uri'], use_remote=remote_working)
+                            if ret_categories:
+                                entity['categories'] = ret_categories
+                            ret_types = get_types(entity['uri'],
+                                    use_remote=remote_working)
+                            if ret_types:
+                                entity['types'] = ",".join(ret_types)
+
                             entity['endChar'] += 1
-                    if entity['uri'] in redirection_to_uri:
-                        entity['uri'] = redirection_to_uri[entity['uri']]
+                    ret_redirection = get_redirections(entity['uri'],
+                            use_remote=remote_working)
+                    if ret_redirection:
+                        entity['uri'] = ret_redirection
                     if add:
                         entities.append(entity)
                 sentence['entities'] = entities
