@@ -29,8 +29,8 @@ def _dbpedia_annotate(text):
     return _call(cmd)
 
 def _tagme_annotate(text):
-    server = "http://tagme.di.unipi.it/tag"
-    data = "key="+settings.TAGME_KEY+"&include_categories=true&text="+urllib.quote(text.encode("utf8"))
+    server = "https://tagme.d4science.org/tagme/tag"
+    data = "gcube-token="+settings.TAGME_KEY+"&include_categories=true&text="+urllib.quote(text.encode("utf8"))
     cmd = ['curl', '--data', data, server]
     return _call(cmd)
     
