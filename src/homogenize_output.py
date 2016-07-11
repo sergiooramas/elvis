@@ -108,7 +108,7 @@ def load_from_local():
 def get_redirections(key, use_remote=False):
     global redirection_to_uri
     if use_remote:
-        url = settings.SERVER_URL + "/redirections"
+        url = settings.SERVER_URL + "/redirects"
         q = session.get(url, data={'key': key})
         resp = q.json()
         return resp['result']
