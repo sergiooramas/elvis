@@ -153,19 +153,19 @@ def check_status():
     except requests.exceptions.ConnectionError:
         return False
 
-def homogenize_ner(technique,source):
+def homogenize_ner(technique,source,data):
     # Check if remote server is working, otherwise use local files
     remote_working = check_status()
-    if not remote_working:
+    if not remote_working or data=='local':
         print "Starting to load data from local files"
         load_from_local()
+        print "Data loaded"
 
     if technique == 'all':
         techniques = ['spotlight','tagme','babelfy']
     else:
         techniques = [technique]
 
-    print "Data loaded"
     for technique in techniques:
         create_directories(technique, source)
         folder = settings.PATH+"/entities/%s/%s" % (technique,source)
@@ -231,10 +231,12 @@ def homogenize_ner(technique,source):
                         entities.append(entity)
                 sentence['entities'] = entities
             json.dump(sentences, codecs.open(output_folder+name, "w", "utf-8"))
+            print name
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Homogenize the output of the Entity Linking systems.')
     parser.add_argument('technique', default="all", help='Entity Linking Tool (spotlight, tagme, babelfy, all) (default=all)')
     parser.add_argument('source', help='Source of data to work with (e.g., example)')
+    parser.add_argument('data', nargs='?', default='server', help='DBpedia files locally or in server (local, server) (default=server)')
     args = parser.parse_args()
-    homogenize_ner(args.technique, args.source)
+    homogenize_ner(args.technique, args.source, args.data)
