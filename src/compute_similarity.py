@@ -60,7 +60,7 @@ def compute_similarity(technique,source):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Compute similarity between documents using Maximal Common Subgraph.')
-    parser.add_argument('technique', default="all", help='Entity Linking Tool (spotlight, tagme, babelfy, all) (default=all)')
+    parser.add_argument('technique', help='Entity Linking Tool (spotlight, tagme, babelfy, all) (default=all)')
     parser.add_argument('source', help='Source of data to work with (e.g., example)')
     parser.add_argument('N', default=10, help='Top-N most similar entities')
     args = parser.parse_args()
