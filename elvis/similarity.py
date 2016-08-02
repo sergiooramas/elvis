@@ -7,6 +7,7 @@ import argparse
 import utils
 
 N=10
+artists_list = []
 
 def set_n(n):
 	global N
@@ -30,6 +31,7 @@ def compute_similarity(technique,input_folder,save=False,output_folder='similari
 	prefix = "_".join(input_folder.split('/'))
 	utils.create_directories(output_folder)
 	output_matrix = output_folder+"/"+prefix+"_similarity_matrix.npy"
+	output_index = output_folder+"/"+prefix+"_artists_list.tsv"
 	graphs = []
 
 	for file in elvis_files:
@@ -52,6 +54,8 @@ def compute_similarity(technique,input_folder,save=False,output_folder='similari
 
 	if save:
 		np.save(output_matrix,sim_matrix)
+		fw=open(output_index,'w')
+		fw.write("\n".join(artists_list))
 	return sim_matrix, artists_list
 
 def top_n(sim_matrix,artists_list,n=N,save=False,input_folder='',output_folder='similarity/'):
