@@ -27,7 +27,7 @@ def set_server_url(url):
     session = requests.Session()
     session.mount(SERVER_URL, requests.adapters.HTTPAdapter(max_retries=5))
 
-def load_types():
+def _load_types():
     f = open(DBPEDIA_PATH+"instance_types_en.nt")
     uri_to_types = dict()
     for line in f:
@@ -66,7 +66,7 @@ def load_types():
     f.close()
     return uri_to_types
 
-def load_categories():
+def _load_categories():
     f = open(DBPEDIA_PATH+"article_categories_en.nt")
     uri_to_categories = dict()
     for line in f:
@@ -78,7 +78,7 @@ def load_categories():
     f.close()
     return uri_to_categories
 
-def load_redirections():
+def _load_redirections():
     f = open(DBPEDIA_PATH+"transitive-redirects_en.nt")
     redirection_to_uri = dict()
     for line in f:
@@ -91,7 +91,7 @@ def load_redirections():
     f.close()
     return redirection_to_uri
 
-def load_ids():
+def _load_ids():
     f = open(DBPEDIA_PATH+"page_ids_en.nt")
     id_to_dbpedia = dict()
     for line in f:
@@ -104,16 +104,16 @@ def load_ids():
     f.close()
     return id_to_dbpedia
 
-def load_from_local(technique):
+def _load_from_local(technique):
     global redirection_to_uri, uri_to_types, uri_to_categories, id_to_dbpedia
-    uri_to_types = load_types()
+    uri_to_types = _load_types()
     if technique == 'all' or technique == 'spotlight' or technique == 'babelfy':
-        uri_to_categories = load_categories()
+        uri_to_categories = _load_categories()
     if technique == 'all' or technique == 'tagme':
-        id_to_dbpedia = load_ids()
-    redirection_to_uri = load_redirections()
+        id_to_dbpedia = _load_ids()
+    redirection_to_uri = _load_redirections()
 
-def get_redirections(key, use_remote=False):
+def _get_redirections(key, use_remote=False):
     global redirection_to_uri
     if use_remote:
         url = SERVER_URL + "/redirects"
@@ -123,7 +123,7 @@ def get_redirections(key, use_remote=False):
     else:
         return redirection_to_uri[key]
 
-def get_categories(key, use_remote=False):
+def _get_categories(key, use_remote=False):
     global uri_to_categories
     if use_remote:
         url = SERVER_URL + "/categories"
@@ -133,7 +133,7 @@ def get_categories(key, use_remote=False):
     else:
         return uri_to_categories[key]
 
-def get_id_dbpedia(key, use_remote=False):
+def _get_id_dbpedia(key, use_remote=False):
     global id_to_dbpedia
     if use_remote:
         url = SERVER_URL + "/ids"
@@ -143,7 +143,7 @@ def get_id_dbpedia(key, use_remote=False):
     else:
         return id_to_dbpedia[key]
 
-def get_types(key, use_remote=False):
+def _get_types(key, use_remote=False):
     global uri_to_types
     if use_remote:
         url = SERVER_URL + "/types"
@@ -153,7 +153,7 @@ def get_types(key, use_remote=False):
     else:
         return uri_to_types[key]
 
-def check_status():
+def _check_status():
     url = SERVER_URL + "/status"
     try:
         q = session.get(url)
@@ -166,7 +166,7 @@ def homogenize(technique,ner_folder,data='server'):
     remote_working = check_status()
     if not remote_working or data=='local':
         print "Starting to load data from local files"
-        load_from_local(technique)
+        _load_from_local(technique)
         print "Data loaded"
 
     if technique == 'all':
@@ -188,17 +188,17 @@ def homogenize(technique,ner_folder,data='server'):
                     add = True
                     if technique.lower() == "spotlight":
                         uri = entity['uri']
-                        ret_categories = get_categories(entity['uri'],
+                        ret_categories = _get_categories(entity['uri'],
                                 use_remote=remote_working)
                         if ret_categories:
                             entity['categories'] = ret_categories
                         if entity['types'] == "":
-                            ret_types = get_types(uri, use_remote=remote_working)
+                            ret_types = _get_types(uri, use_remote=remote_working)
                             if ret_types:
                                 entity['types'] = ",".join(ret_types)
                     elif technique.lower() == "tagme":
                         entity['types'] = ""
-                        ret_id_dbpedia = get_id_dbpedia(entity['id'],
+                        ret_id_dbpedia = _get_id_dbpedia(entity['id'],
                                  use_remote=remote_working)
                         if ret_id_dbpedia:
                             entity['uri'] = ret_id_dbpedia
@@ -209,7 +209,7 @@ def homogenize(technique,ner_folder,data='server'):
                             entity['uri'] = "NONE"
                             add = False
                         uri = entity['uri']
-                        ret_types = get_types(uri, use_remote=remote_working)
+                        ret_types = _get_types(uri, use_remote=remote_working)
                         if ret_types:
                             entity['types'] = ",".join(ret_types)
 
@@ -222,16 +222,16 @@ def homogenize(technique,ner_folder,data='server'):
                         entity['types'] = ""
                         if "dbpedia" in entity['uri']:
                             entity['uri'] = entity['uri'].replace("\\u0026","&").replace("\\u0027","'")
-                            ret_categories = get_categories(entity['uri'], use_remote=remote_working)
+                            ret_categories = _get_categories(entity['uri'], use_remote=remote_working)
                             if ret_categories:
                                 entity['categories'] = ret_categories
-                            ret_types = get_types(entity['uri'],
+                            ret_types = _get_types(entity['uri'],
                                     use_remote=remote_working)
                             if ret_types:
                                 entity['types'] = ",".join(ret_types)
 
                             entity['endChar'] += 1
-                    ret_redirection = get_redirections(entity['uri'],
+                    ret_redirection = _get_redirections(entity['uri'],
                             use_remote=remote_working)
                     if ret_redirection:
                         entity['uri'] = ret_redirection

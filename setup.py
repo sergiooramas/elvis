@@ -10,6 +10,10 @@ setup(name='elvis',
       description='Framework to homogenize and combine the output of different entity linking tools.',
       packages=['elvis'],
       install_requires=[
+		'nltk',
+		'requests',
+		'networkx',
+		'numpy'
       ],
 )
 
