@@ -1,22 +1,34 @@
 import json
-import settings
 import glob
 import codecs
 import argparse
-import os
 import urllib
 import requests
+import utils
 
 uri_to_types = {}
 uri_to_categories = {}
 id_to_dbpedia = {}
 redirection_to_uri = {}
 
+DBPEDIA_PATH = "../dbpedia/"
+SERVER_URL = "http://elvis.mtg.upf.edu"
+
 session = requests.Session()
-session.mount(settings.SERVER_URL, requests.adapters.HTTPAdapter(max_retries=5))
+session.mount(SERVER_URL, requests.adapters.HTTPAdapter(max_retries=5))
+
+def set_dbpedia_path(path):
+    global DBPEDIA_PATH
+    DBPEDIA_PATH = path
+
+def set_server_url(url):
+    global SERVER_URL
+    SERVER_URL = url
+    session = requests.Session()
+    session.mount(SERVER_URL, requests.adapters.HTTPAdapter(max_retries=5))
 
 def load_types():
-    f = open(settings.DBPEDIA_PATH+"instance_types_en.nt")
+    f = open(DBPEDIA_PATH+"instance_types_en.nt")
     uri_to_types = dict()
     for line in f:
         data = line.strip().split(" ")
@@ -30,7 +42,7 @@ def load_types():
                 type = "Schema:"+type_token[type_token.rfind("/")+1:-1]
                 uri_to_types.setdefault(uri,[]).append(type)
     f.close()
-    f = open(settings.DBPEDIA_PATH+"instance_types_heuristic_en.nt")
+    f = open(DBPEDIA_PATH+"instance_types_heuristic_en.nt")
     for line in f:
         data = line.strip().split(" ")
         if data[1].endswith("type>"):
@@ -43,7 +55,7 @@ def load_types():
                 type = "Schema:"+type_token[type_token.rfind("/")+1:-1]
                 uri_to_types.setdefault(uri,[]).append(type)
     f.close()
-    f = open(settings.DBPEDIA_PATH+"yago_types.nt")
+    f = open(DBPEDIA_PATH+"yago_types.nt")
     for line in f:
         data = line.strip().split(" ")
         if data[1].endswith("type>"):
@@ -55,7 +67,7 @@ def load_types():
     return uri_to_types
 
 def load_categories():
-    f = open(settings.DBPEDIA_PATH+"article_categories_en.nt")
+    f = open(DBPEDIA_PATH+"article_categories_en.nt")
     uri_to_categories = dict()
     for line in f:
         data = line.strip().split(" ")
@@ -67,7 +79,7 @@ def load_categories():
     return uri_to_categories
 
 def load_redirections():
-    f = open(settings.DBPEDIA_PATH+"transitive-redirects_en.nt")
+    f = open(DBPEDIA_PATH+"transitive-redirects_en.nt")
     redirection_to_uri = dict()
     for line in f:
         data = line.strip().split(" ")
@@ -80,7 +92,7 @@ def load_redirections():
     return redirection_to_uri
 
 def load_ids():
-    f = open(settings.DBPEDIA_PATH+"page_ids_en.nt")
+    f = open(DBPEDIA_PATH+"page_ids_en.nt")
     id_to_dbpedia = dict()
     for line in f:
         data = line.strip().split(" ")
@@ -92,11 +104,7 @@ def load_ids():
     f.close()
     return id_to_dbpedia
 
-def create_directories(technique, source):
-    if not os.path.exists(settings.PATH+"/entities/"+technique+"/"+source+"_h"):
-        os.mkdir(settings.PATH+"/entities/"+technique+"/"+source+"_h")
-
-def load_from_local():
+def load_from_local(technique):
     global redirection_to_uri, uri_to_types, uri_to_categories, id_to_dbpedia
     uri_to_types = load_types()
     if technique == 'all' or technique == 'spotlight' or technique == 'babelfy':
@@ -108,7 +116,7 @@ def load_from_local():
 def get_redirections(key, use_remote=False):
     global redirection_to_uri
     if use_remote:
-        url = settings.SERVER_URL + "/redirects"
+        url = SERVER_URL + "/redirects"
         q = session.get(url, data={'key': key})
         resp = q.json()
         return resp['result']
@@ -118,7 +126,7 @@ def get_redirections(key, use_remote=False):
 def get_categories(key, use_remote=False):
     global uri_to_categories
     if use_remote:
-        url = settings.SERVER_URL + "/categories"
+        url = SERVER_URL + "/categories"
         q = session.get(url, data={'key': key})
         resp = q.json()
         return resp['result']
@@ -128,7 +136,7 @@ def get_categories(key, use_remote=False):
 def get_id_dbpedia(key, use_remote=False):
     global id_to_dbpedia
     if use_remote:
-        url = settings.SERVER_URL + "/ids"
+        url = SERVER_URL + "/ids"
         q = session.get(url, data={'key': key})
         resp = q.json()
         return resp['result']
@@ -138,7 +146,7 @@ def get_id_dbpedia(key, use_remote=False):
 def get_types(key, use_remote=False):
     global uri_to_types
     if use_remote:
-        url = settings.SERVER_URL + "/types"
+        url = SERVER_URL + "/types"
         q = session.get(url, data={'key': key})
         resp = q.json()
         return resp['result']
@@ -146,19 +154,19 @@ def get_types(key, use_remote=False):
         return uri_to_types[key]
 
 def check_status():
-    url = settings.SERVER_URL + "/status"
+    url = SERVER_URL + "/status"
     try:
         q = session.get(url)
         return q.status_code == 200
     except requests.exceptions.ConnectionError:
         return False
 
-def homogenize_ner(technique,source,data):
+def homogenize(technique,ner_folder,data='server'):
     # Check if remote server is working, otherwise use local files
     remote_working = check_status()
     if not remote_working or data=='local':
         print "Starting to load data from local files"
-        load_from_local()
+        load_from_local(technique)
         print "Data loaded"
 
     if technique == 'all':
@@ -167,9 +175,9 @@ def homogenize_ner(technique,source,data):
         techniques = [technique]
 
     for technique in techniques:
-        create_directories(technique, source)
-        folder = settings.PATH+"/entities/%s/%s" % (technique,source)
-        output_folder = settings.PATH+"/entities/%s/%s_h/" % (technique,source)
+        output_folder = ner_folder + "_h/" + technique + "/"
+        folder = ner_folder + '/' + technique
+        utils.create_directories(output_folder)
         filenames = sorted(list(glob.glob(folder+"/*.json")))
         for file in filenames:
             name = file[file.rfind("/")+1:]
@@ -236,7 +244,7 @@ def homogenize_ner(technique,source,data):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Homogenize the output of the Entity Linking systems.')
     parser.add_argument('technique', default="all", help='Entity Linking Tool (spotlight, tagme, babelfy, all) (default=all)')
-    parser.add_argument('source', help='Source of data to work with (e.g., example)')
+    parser.add_argument('folder', help='Source of data to work with (e.g., example)')
     parser.add_argument('data', nargs='?', default='server', help='DBpedia files locally or in server (local, server) (default=server)')
     args = parser.parse_args()
-    homogenize_ner(args.technique, args.source, args.data)
+    homogenize(args.technique, args.folder, args.data)

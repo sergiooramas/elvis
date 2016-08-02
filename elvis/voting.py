@@ -3,42 +3,16 @@
 
 import argparse
 import glob
-import settings
 import json
 import codecs
-import os
-
-def create_directories(source,level):
-    if not os.path.exists(settings.PATH+"/entities/agreement"):
-        os.mkdir(settings.PATH+"/entities/agreement")
-    if not os.path.exists(settings.PATH+"/entities/agreement/"+source+"_"+str(level)):
-        os.mkdir(settings.PATH+"/entities/agreement/"+source+"_"+str(level))
-
-def intersects(entity1,entity2):
-    intersect = True
-    if entity1[0] < entity2[0] and entity1[1] < entity2[0]:
-        intersect = False
-    elif entity2[0] < entity1[0] and entity2[1] < entity1[0]:
-        intersect = False
-    return intersect
-
-def aggregation(entities,to_add):
-	union = entities
-	for e in to_add:
-		intersect = False
-		for ent in entities:
-			if intersects(e, ent):
-				intersect = True
-				break
-		if not intersect:
-			union.add(e)
-	return union
+import utils
 
 
-def agreement(source,level):
+def vote(source,level):
 	tools = ['babelfy','tagme','spotlight']
-	filenames = sorted(list(glob.glob(settings.PATH+"/entities/"+tools[0]+"/"+source+"/*.json")))
-	output_folder = settings.PATH+"/entities/agreement/"+source+"_"+str(level)+"/"
+	filenames = sorted(list(glob.glob(source+"/"+tools[0]+"/*.json")))
+	output_folder = source+"/agreement_"+str(level)+"/"
+	utils.create_directories(output_folder)
 	n = 0
 	for file in filenames:
 		output_sentences = []
@@ -47,7 +21,7 @@ def agreement(source,level):
 		ner_file = dict()
 		ner_sentences = dict()
 		for tool in tools:
-			ner_file[tool] = settings.PATH+"/entities/"+tool+"/"+source+"/"+name
+			ner_file[tool] = source+"/"+tool+"/"+name
 			ner_sentences[tool] = json.load(codecs.open(ner_file[tool],"r", "utf-8"))
 		i = 0
 		for i in range(0,len(sentences)):
@@ -88,5 +62,4 @@ if __name__ == '__main__':
 	parser.add_argument('source', help='Source of data to work with (e.g., example)')
 	parser.add_argument('level', help='Minimum level of agreement (2,3)')
 	args = parser.parse_args()
-	create_directories(args.source,args.level)
-	agreement(args.source,int(args.level))
+	vote(args.source,int(args.level))

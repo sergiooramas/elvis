@@ -1,8 +1,24 @@
 import os, subprocess, json, codecs, argparse, glob
 import urllib
-import settings
 import time
 from nltk.tokenize import sent_tokenize
+import utils
+
+DBPEDIA_SPOTLIGHT_ENDPOINT = "http://spotlight.sztaki.hu:2222/rest/annotate"
+BABELFY_KEY = ""
+TAGME_KEY = ""
+
+def set_babelfy_key(key):
+    global BABELFY_KEY
+    BABELFY_KEY = key
+
+def set_tagme_key(key):
+    global TAGME_KEY
+    TAGME_KEY = key
+
+def set_spotlight_endpoint(url):
+    global DBPEDIA_SPOTLIGHT_ENDPOINT
+    DBPEDIA_SPOTLIGHT_ENDPOINT = url
 
 def _call(cmd):
     done = False
@@ -24,29 +40,21 @@ def _call(cmd):
             return 0,""
 
 def _dbpedia_annotate(text):
-    cmd = ['curl', '-H', 'Accept: application/json', settings.DBPEDIA_SPOTLIGHT_ENDPOINT, '--data-urlencode', 'text=%s' % urllib.quote(text.encode("utf8")),
+    cmd = ['curl', '-H', 'Accept: application/json', DBPEDIA_SPOTLIGHT_ENDPOINT, '--data-urlencode', 'text=%s' % urllib.quote(text.encode("utf8")),
                '--data', 'confidence=0.2', '--data', 'support=20']
     return _call(cmd)
 
 def _tagme_annotate(text):
     server = "https://tagme.d4science.org/tagme/tag"
-    data = "gcube-token="+settings.TAGME_KEY+"&include_categories=true&text="+urllib.quote(text.encode("utf8"))
+    data = "gcube-token="+TAGME_KEY+"&include_categories=true&text="+urllib.quote(text.encode("utf8"))
     cmd = ['curl', '--data', data, server]
     return _call(cmd)
     
 def _babelfy_annotate(text):
     server = "https://babelfy.io/v1/disambiguate"
-    data = "key="+settings.BABELFY_KEY+"&lang=EN&annType=ALL&text="+urllib.quote(text.encode("utf8"))
+    data = "key="+BABELFY_KEY+"&lang=EN&annType=ALL&text="+urllib.quote(text.encode("utf8"))
     cmd = ['curl', '--data', data, server]
     return _call(cmd)
-
-def create_directories(technique, source):
-    if not os.path.exists(settings.PATH+"/entities"):
-        os.mkdir(settings.PATH+"/entities")
-    if not os.path.exists(settings.PATH+"/entities/"+technique):
-        os.mkdir(settings.PATH+"/entities/"+technique)
-    if not os.path.exists(settings.PATH+"/entities/"+technique+"/"+source):
-        os.mkdir(settings.PATH+"/entities/"+technique+"/"+source)
 
 def spotlight(sentences):
     text = "\n".join(sentences)
@@ -139,21 +147,23 @@ def babelfy(sentences):
             index += 1
     return ner_sentences
 
-def run_tool(source, technique, notokenize, start_index=0, end_index=None):
-    create_directories(technique, source)
-    input_filenames = sorted(list(glob.glob(settings.TEXTS_PATH+source+"/*.txt")))
+def process_folder(technique, input_folder, output_folder="", tokenize=True, start_index=0, end_index=None):
+    if output_folder == "":
+        output_folder = 'entities/' + input_folder[input_folder.rfind('/')+1:] + "/" + technique
+    utils.create_directories(output_folder)
+    input_filenames = sorted(list(glob.glob(input_folder+"/*.txt")))
     for input_filename in input_filenames[start_index:end_index]:
         suffix = input_filename[input_filename.rfind("/")+1:-4]
-        output_filename = settings.PATH+"/entities/"+technique+"/"+source+"/"+suffix+".json"
+        output_filename = output_folder+"/"+suffix+".json"
         print suffix
         if not os.path.exists(output_filename):  
-            if notokenize:
-                with codecs.open(input_filename, "r", "utf-8") as f:
-                    sentences = [line for line in f]
-            else:
+            if tokenize:
                 with codecs.open(input_filename, "r", "utf-8") as f:
                     text = f.read()
                 sentences = sent_tokenize(text)
+            else:
+                with codecs.open(input_filename, "r", "utf-8") as f:
+                    sentences = [line for line in f]
             ner_sentences = []
             if technique == 'tagme':
                 ner_sentences = tagme(sentences)
@@ -168,11 +178,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Perform Entity Linking.')
     parser.add_argument('technique', default="spotlight", help='Entity Linking Tool (spotlight, tagme, babelfy) (default=spotlight)')
     parser.add_argument('source', help='Source of data to work with (e.g., example)')
-    parser.add_argument('-nt', dest='notokenize', action='store_true', help='Disable tokenization')
+    parser.add_argument('-t', dest='tokenize', action='store_false', default=False, help='Enable tokenization')
     parser.add_argument('-s', '--start-index', type=int, default=0, help='start index (default=0)')
     parser.add_argument('-e', '--end-index', type=int, help='end index (default=number of files)')
     args = parser.parse_args()
     start_time = time.time()
-    run_tool(args.source, args.technique.lower(), args.notokenize, args.start_index, args.end_index)
+    process_folder(args.technique.lower(), args.source, "", args.tokenize, args.start_index, args.end_index)
     print(time.time() - start_time)
 
