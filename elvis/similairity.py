@@ -7,7 +7,6 @@ import argparse
 import utils
 
 N=10
-artists_list = []
 
 def set_n(n):
 	global N

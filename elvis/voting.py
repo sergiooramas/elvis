@@ -5,7 +5,7 @@ import codecs
 import utils
 
 
-def vote(source,level):
+def voting(source,level):
 	tools = ['babelfy','tagme','spotlight']
 	filenames = sorted(list(glob.glob(source+"/"+tools[0]+"/*.json")))
 	output_folder = source+"/agreement_"+str(level)+"/"
@@ -59,4 +59,4 @@ if __name__ == '__main__':
 	parser.add_argument('source', help='Source of data to work with (e.g., example)')
 	parser.add_argument('level', help='Minimum level of agreement (2,3)')
 	args = parser.parse_args()
-	vote(args.source,int(args.level))
+	voting(args.source,int(args.level))
