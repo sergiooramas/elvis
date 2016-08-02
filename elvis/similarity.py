@@ -20,9 +20,9 @@ def _maximal_common(G1,G2,weighted=False):
 	return similarity
 
 def _get_top_n(row):
-	ordered = np.argsort(row)
+	ordered = np.argsort(row)[::-1]
 	top_list = []
-	for index in ordered[:N]:
+	for index in ordered[1:N]:
 		top_list.append(artists_list[index].decode("utf-8"))
 	return top_list
 
@@ -56,6 +56,7 @@ def compute_similarity(technique,input_folder,save=False,output_folder='similari
 		np.save(output_matrix,sim_matrix)
 		fw=open(output_index,'w')
 		fw.write("\n".join(artists_list))
+		fw.close()
 	return sim_matrix, artists_list
 
 def top_n(sim_matrix,artists_list,n=N,save=False,input_folder='',output_folder='similarity/'):
