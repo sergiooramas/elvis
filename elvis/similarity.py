@@ -22,11 +22,12 @@ def _maximal_common(G1,G2,weighted=False):
 def _get_top_n(row):
 	ordered = np.argsort(row)[::-1]
 	top_list = []
-	for index in ordered[1:N]:
+	for index in ordered[1:N+1]:
 		top_list.append(artists_list[index].decode("utf-8"))
 	return top_list
 
-def compute_similarity(technique,input_folder,save=False,output_folder='similarity/'):
+def compute_similarity(input_folder,save=False,output_folder='similarity/'):
+	artists_list = []
 	elvis_files = glob.glob(input_folder+"/*.json")
 	prefix = "_".join(input_folder.split('/'))
 	utils.create_directories(output_folder)

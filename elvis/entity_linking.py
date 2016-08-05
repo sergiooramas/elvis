@@ -152,6 +152,7 @@ def process_folder(technique, input_folder, output_folder="", tokenize=True, sta
         output_folder = 'entities/' + input_folder[input_folder.rfind('/')+1:] + "/" + technique
     utils.create_directories(output_folder)
     input_filenames = sorted(list(glob.glob(input_folder+"/*.txt")))
+    print len(input_filenames)
     for input_filename in input_filenames[start_index:end_index]:
         suffix = input_filename[input_filename.rfind("/")+1:-4]
         output_filename = output_folder+"/"+suffix+".json"
