@@ -7,70 +7,69 @@ import argparse
 import utils
 
 N=10
-artists_list = []
 
 def set_n(n):
-	global N
-	N = n
+    global N
+    N = n
 
 def _maximal_common(G1,G2,weighted=False):
-	common = len(set(G1.nodes()).intersection(set(G2.nodes())))
-	size = max(len(G1.nodes()),len(G2.nodes()))
-	similarity = common*1.0 / size
-	return similarity
+    common = len(set(G1.nodes()).intersection(set(G2.nodes())))
+    size = max(len(G1.nodes()),len(G2.nodes()))
+    similarity = common*1.0 / size
+    return similarity
 
-def _get_top_n(row):
-	ordered = np.argsort(row)[::-1]
-	top_list = []
-	for index in ordered[1:N+1]:
-		top_list.append(artists_list[index].decode("utf-8"))
-	return top_list
+def _get_top_n(row,artists_list):
+    ordered = np.argsort(row)[::-1]
+    top_list = []
+    for index in ordered[1:N+1]:
+        top_list.append(artists_list[index].decode("utf-8"))
+    return top_list
 
 def compute_similarity(input_folder,save=False,output_folder='similarity/'):
-	artists_list = []
-	elvis_files = glob.glob(input_folder+"/*.json")
-	prefix = "_".join(input_folder.split('/'))
-	utils.create_directories(output_folder)
-	output_matrix = output_folder+"/"+prefix+"_similarity_matrix.npy"
-	output_index = output_folder+"/"+prefix+"_artists_list.tsv"
-	graphs = []
+    artists_list = []
+    elvis_files = glob.glob(input_folder+"/*.json")
+    prefix = "_".join(input_folder.split('/'))
+    utils.create_directories(output_folder)
+    output_matrix = output_folder+"/"+prefix+"_similarity_matrix.npy"
+    output_index = output_folder+"/"+prefix+"_artists_list.tsv"
+    graphs = []
 
-	for file in elvis_files:
-		G = nx.Graph()
-		data = json.load(codecs.open(file,"r","utf-8"))
-		filename = file[file.rfind("/")+1:-5]
-		G.add_node(filename)
-		for sentence in data:
-			for entity in sentence['entities']:
-				G.add_edge(filename,entity['uri'])
-		graphs.append(G)
-		artists_list.append(filename)
+    for file in elvis_files:
+        G = nx.Graph()
+        data = json.load(codecs.open(file,"r","utf-8"))
+        filename = file[file.rfind("/")+1:-5]
+        G.add_node(filename)
+        for sentence in data:
+            for entity in sentence['entities']:
+                G.add_edge(filename,entity['uri'])
+        graphs.append(G)
+        artists_list.append(filename)
 
-	sim_matrix = np.zeros((len(graphs),len(graphs)))
-	for i in range(0,len(graphs)):
-		for j in range(i,len(graphs)):
-			mcs = _maximal_common(graphs[i], graphs[j])
-			sim_matrix[i,j] = mcs
-			sim_matrix[j,i] = mcs
+    sim_matrix = np.zeros((len(graphs),len(graphs)))
+    for i in range(0,len(graphs)):
+        for j in range(i,len(graphs)):
+            mcs = _maximal_common(graphs[i], graphs[j])
+            sim_matrix[i,j] = mcs
+            sim_matrix[j,i] = mcs
 
-	if save:
-		np.save(output_matrix,sim_matrix)
-		fw=open(output_index,'w')
-		fw.write("\n".join(artists_list))
-		fw.close()
-	return sim_matrix, artists_list
+    if save:
+        np.save(output_matrix,sim_matrix)
+        fw=open(output_index,'w')
+        fw.write("\n".join(artists_list))
+        fw.close()
+    return sim_matrix, artists_list
 
 def top_n(sim_matrix,artists_list,n=N,save=False,input_folder='',output_folder='similarity/'):
-	set_n(n)
-	top = np.apply_along_axis(_get_top_n, axis=1, arr=sim_matrix)
-	if save:
-		prefix = "_".join(input_folder.split('/'))
-		output_list = output_folder+"/"+prefix+"_similarity_top_"+str(n)+".txt"
-		fw = codecs.open(output_list,"w","utf-8")
-		for index, l in enumerate(top):
-			fw.write(artists_list[index].decode("utf-8")+"\t"+"\t".join(l)+"\n")
-	
-	return top
+    set_n(n)
+    top = np.apply_along_axis(_get_top_n, axis=1, arr=sim_matrix, artists_list)
+    if save:
+        prefix = "_".join(input_folder.split('/'))
+        output_list = output_folder+"/"+prefix+"_similarity_top_"+str(n)+".txt"
+        fw = codecs.open(output_list,"w","utf-8")
+        for index, l in enumerate(top):
+            fw.write(artists_list[index].decode("utf-8")+"\t"+"\t".join(l)+"\n")
+    
+    return top
 
 
 if __name__ == '__main__':
