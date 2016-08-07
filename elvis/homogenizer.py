@@ -117,7 +117,7 @@ def _get_redirections(key, use_remote=False):
     global redirection_to_uri
     if use_remote:
         url = SERVER_URL + "/redirects"
-        q = session.get(url, data={'key': key})
+        q = session.get(url, params={'key': key})
         resp = q.json()
         return resp['result']
     else:
@@ -127,7 +127,7 @@ def _get_categories(key, use_remote=False):
     global uri_to_categories
     if use_remote:
         url = SERVER_URL + "/categories"
-        q = session.get(url, data={'key': key})
+        q = session.get(url, params={'key': key})
         resp = q.json()
         return resp['result']
     else:
@@ -137,7 +137,7 @@ def _get_id_dbpedia(key, use_remote=False):
     global id_to_dbpedia
     if use_remote:
         url = SERVER_URL + "/ids"
-        q = session.get(url, data={'key': key})
+        q = session.get(url, params={'key': key})
         resp = q.json()
         return resp['result']
     else:
@@ -147,7 +147,7 @@ def _get_types(key, use_remote=False):
     global uri_to_types
     if use_remote:
         url = SERVER_URL + "/types"
-        q = session.get(url, data={'key': key})
+        q = session.get(url, params={'key': key})
         resp = q.json()
         return resp['result']
     else:
