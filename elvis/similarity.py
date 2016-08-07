@@ -33,7 +33,6 @@ def compute_similarity(input_folder,save=False,output_folder='similarity/'):
     output_matrix = output_folder+"/"+prefix+"_similarity_matrix.npy"
     output_index = output_folder+"/"+prefix+"_artists_list.tsv"
     graphs = []
-
     for file in elvis_files:
         G = nx.Graph()
         data = json.load(codecs.open(file,"r","utf-8"))
@@ -61,7 +60,7 @@ def compute_similarity(input_folder,save=False,output_folder='similarity/'):
 
 def top_n(sim_matrix,artists_list,n=N,save=False,input_folder='',output_folder='similarity/'):
     set_n(n)
-    top = np.apply_along_axis(_get_top_n, axis=1, arr=sim_matrix, artists_list)
+    top = np.apply_along_axis(_get_top_n, 1, sim_matrix, artists_list)
     if save:
         prefix = "_".join(input_folder.split('/'))
         output_list = output_folder+"/"+prefix+"_similarity_top_"+str(n)+".txt"
