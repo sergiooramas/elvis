@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='elvis',
-      version='0.1.1',
+      version='0.1.2',
       author='Sergio Oramas',
       author_email='sergio DOT oramas AT upf DOT edu',
       license='MIT',
