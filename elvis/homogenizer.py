@@ -163,7 +163,7 @@ def _check_status():
 
 def homogenize(technique,ner_folder,data='server'):
     # Check if remote server is working, otherwise use local files
-    remote_working = check_status()
+    remote_working = _check_status()
     if not remote_working or data=='local':
         print "Starting to load data from local files"
         _load_from_local(technique)
@@ -175,7 +175,7 @@ def homogenize(technique,ner_folder,data='server'):
         techniques = [technique]
 
     for technique in techniques:
-        output_folder = ner_folder + "_h/" + technique + "/"
+        output_folder = ner_folder + '/' + technique + "_h/" + "/"
         folder = ner_folder + '/' + technique
         utils.create_directories(output_folder)
         filenames = sorted(list(glob.glob(folder+"/*.json")))
@@ -238,6 +238,7 @@ def homogenize(technique,ner_folder,data='server'):
                     if add:
                         entities.append(entity)
                 sentence['entities'] = entities
+            print output_folder
             json.dump(sentences, codecs.open(output_folder+name, "w", "utf-8"))
             print name
 

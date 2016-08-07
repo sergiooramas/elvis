@@ -3,6 +3,7 @@ import urllib
 import time
 from nltk.tokenize import sent_tokenize
 import utils
+import sys
 
 DBPEDIA_SPOTLIGHT_ENDPOINT = "http://spotlight.sztaki.hu:2222/rest/annotate"
 BABELFY_KEY = ""
@@ -152,12 +153,11 @@ def process_folder(technique, input_folder, output_folder="", tokenize=True, sta
         output_folder = 'entities/' + input_folder[input_folder.rfind('/')+1:] + "/" + technique
     utils.create_directories(output_folder)
     input_filenames = sorted(list(glob.glob(input_folder+"/*.txt")))
-    print len(input_filenames)
+    i = 0
     for input_filename in input_filenames[start_index:end_index]:
         suffix = input_filename[input_filename.rfind("/")+1:-4]
         output_filename = output_folder+"/"+suffix+".json"
-        print suffix
-        if not os.path.exists(output_filename):  
+        if not os.path.exists(output_filename):
             if tokenize:
                 with codecs.open(input_filename, "r", "utf-8") as f:
                     text = f.read()
@@ -173,6 +173,9 @@ def process_folder(technique, input_folder, output_folder="", tokenize=True, sta
             elif technique == 'spotlight':
                 ner_sentences = spotlight(sentences)
             json.dump(ner_sentences, codecs.open(output_filename, "w", "utf-8"))
+        i += 1
+        sys.stdout.write("\rProcessing Data: %d of %d" % (i, len(input_filenames[start_index:end_index])))
+        sys.stdout.flush()
 
 
 if __name__ == '__main__':
